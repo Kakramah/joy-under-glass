@@ -7,3 +7,6 @@ dist/
 .env
 .env.*
 !.env.example
+._*
+*.bak
+__pycache__/
