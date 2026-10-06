@@ -26,16 +26,42 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
   }
-  const protectButton = document.querySelector('#protect-light');
-  document.querySelector('.gaze-control').hidden = false;
-  protectButton.addEventListener('click', () => {
-    const protectedState = protectButton.getAttribute('aria-pressed') !== 'true';
-    protectButton.setAttribute('aria-pressed', String(protectedState));
-    document.querySelector('.reading-art').classList.toggle('protected', protectedState);
-    protectButton.firstChild.textContent = protectedState ? 'أعد النظرة ' : 'أزح النظرة ';
-    document.querySelector('#light-status').textContent = protectedState
-      ? 'تغيّرت النظرة. بقي الضوء.' : 'المرآة تُغيّر الصورة. لا تُغيّر الزهرة.';
-  });
+  const rueyaStudy = document.querySelector('.rueya-study');
+  const phaseControls = Array.from(document.querySelectorAll('[data-phase][type="button"]'));
+  const phaseStates = window.RUEYA_STATES;
+  if (rueyaStudy && phaseStates) {
+    document.querySelector('.rueya-controls').hidden = false;
+    function setPhase(phase) {
+      const state = phaseStates[phase];
+      rueyaStudy.dataset.phase = phase;
+      phaseControls.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.phase === phase)));
+      document.querySelector('#rueya-state-title').textContent = state.title;
+      document.querySelector('#rueya-state-verse').textContent = state.text;
+      const source = document.querySelector('#rueya-state-source');
+      source.href = state.source;
+      source.firstChild.textContent = state.reference + ' ';
+      const a = phase === 'plot' ? 125 : phase === 'fulfilled' ? 224 : 286;
+      const b = phase === 'plot' ? 43 : phase === 'fulfilled' ? 224 : 137;
+      const centerY = phase === 'plot' ? 402 : 323;
+      const tilt = -Math.PI / 12;
+      document.querySelectorAll('[data-planet]').forEach((planet, i) => {
+        const theta = i * Math.PI * 2 / 11;
+        const x = 360 + a * Math.cos(theta) * Math.cos(tilt) - b * Math.sin(theta) * Math.sin(tilt);
+        const y = centerY + a * Math.cos(theta) * Math.sin(tilt) + b * Math.sin(theta) * Math.cos(tilt);
+        planet.style.transform = `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`;
+      });
+    }
+    phaseControls.forEach((button, index) => {
+      button.addEventListener('click', () => setPhase(button.dataset.phase));
+      button.addEventListener('keydown', event => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        const next = (index + (event.key === 'ArrowLeft' ? 1 : -1) + phaseControls.length) % phaseControls.length;
+        phaseControls[next].focus();
+        setPhase(phaseControls[next].dataset.phase);
+      });
+    });
+  }
   const imageDialog = document.querySelector('#image-dialog');
   const imageLinks = Array.from(document.querySelectorAll('[data-view]'));
   let currentImage = 0;
@@ -85,7 +111,7 @@
   const localPreview = ['localhost', '127.0.0.1', ''].includes(location.hostname);
   const shareUrl = location.href.split('#')[0];
   const shareTitle = 'حين يُراقَب الضوء';
-  const shareText = 'لا شيء أكثر خطرًا من أن تكون سعيدًا أمام شخصٍ حاسد.';
+  const shareText = 'من وصية يعقوب إلى عفو يوسف: تأمل في الفرح والحسد وصيانة النعمة.';
   shareInput.value = shareUrl;
   const encodedUrl = encodeURIComponent(shareUrl);
   const encodedText = encodeURIComponent(`${shareTitle}\n${shareText}\n${shareUrl}`);
