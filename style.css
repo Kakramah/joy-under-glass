@@ -29,3 +29,162 @@
 .hero-art .image-link{height:calc(100% - 52px)}
 .hero-art figcaption{height:52px;bottom:0;left:0;right:0;padding:0 var(--gutter);display:flex;align-items:center;justify-content:flex-end;background:var(--paper);color:var(--ink)}
 .hero-art{justify-content:flex-start}
+
+/* Taste review T6/T8: motion follows the reading, masks touch photographs only. */
+:root {
+  --paper-neutral: #f2eee5;
+  --paper-caution: #edeae4;
+  --paper-warm: #f4ebde;
+  --floor-light: #fff4dc;
+  --floor-shift: 0px;
+  --well-radius: 115%;
+  --door-brightness: 1.08;
+}
+.reading-art .image-link > img,
+.light-art .image-link > img {
+  mask-image:
+    radial-gradient(ellipse 48% 9% at 65% 91%, var(--ink) 0 64%, transparent 100%),
+    linear-gradient(to right, transparent, var(--ink) 12% 86%, transparent),
+    linear-gradient(to bottom, transparent, var(--ink) 9% 89%, transparent);
+  mask-composite: add, intersect, add;
+  mask-mode: alpha;
+}
+.well-art .image-link > img {
+  mask-image:
+    radial-gradient(ellipse 48% 9% at 65% 91%, var(--ink) 0 64%, transparent 100%),
+    linear-gradient(to right, var(--ink) 0 76%, transparent),
+    linear-gradient(to bottom, transparent, var(--ink) 14% 85%, transparent);
+  mask-composite: add, intersect, add;
+  mask-mode: alpha;
+  clip-path: circle(var(--well-radius) at 50% 25%);
+}
+.light-art .image-link > img { filter: brightness(var(--door-brightness)); }
+.art-mark { z-index: 3; }
+.expand-hint { z-index: 4; }
+.art-mark-light > span[dir=ltr] { color: var(--paper-neutral); }
+.hero-art .image-link::after {
+  content: '';
+  position: absolute;
+  width: 76%;
+  height: 22%;
+  left: 9%;
+  bottom: 2%;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--floor-light) 44%, transparent), transparent 69%);
+  transform: translateX(var(--floor-shift)) rotate(-14deg);
+  mix-blend-mode: screen;
+}
+.afterword { position: relative; }
+.afterword::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: -1px;
+  height: 1px;
+  background: var(--accent);
+  transform-origin: right;
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: no-preference) {
+  body, .site-header, .hero-art figcaption, dialog {
+    transition: background-color 1.25s var(--ease);
+  }
+  .light-art .image-link > img {
+    transition: filter 1.25s var(--ease), transform 1s var(--ease);
+  }
+  .reveal.is-revealing { animation: reading-arrival .65s var(--ease) both; }
+  .planets-entered .planet circle {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: planet-arrival .6s var(--ease) both;
+    animation-delay: var(--planet-delay, 0s);
+  }
+  #gaze blockquote.verse-entered {
+    animation: verse-lines var(--verse-duration, 1.2s) steps(var(--verse-lines, 4), start) both;
+  }
+  .boundary-columns > .prose.boundary-entered {
+    animation: reading-arrival .8s var(--ease) both;
+    animation-delay: var(--boundary-delay, 0s);
+  }
+  .afterword.share-entered::before { animation: passing-line .9s var(--ease) both; }
+  .sources[open] > :not(summary) { animation: source-arrival .35s var(--ease) both; }
+  .contacts-entered a { animation: contact-arrival .55s var(--ease) both; }
+  .contacts-entered a:nth-child(2) { animation-delay: .1s; }
+  .contacts-entered a:nth-child(3) { animation-delay: .2s; }
+  @keyframes reading-arrival {
+    from { transform: translateY(16px); opacity: 1; }
+    to { transform: none; opacity: 1; }
+  }
+  @keyframes planet-arrival {
+    from { transform: scale(.65); opacity: .08; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  @keyframes verse-lines {
+    from { clip-path: inset(0 0 100% 0); }
+    to { clip-path: inset(0); }
+  }
+  @keyframes passing-line {
+    from { transform: scaleX(.05); }
+    to { transform: scaleX(1); }
+  }
+  @keyframes source-arrival {
+    from { transform: translateY(6px); }
+    to { transform: none; }
+  }
+  @keyframes contact-arrival {
+    from { transform: translateY(9px); opacity: .7; }
+    to { transform: none; opacity: 1; }
+  }
+  @media (max-width: 767px) {
+    .hero-art .image-link::after { transform: rotate(-14deg); }
+    .hero-art.floor-entered .image-link::after { animation: floor-arrival .9s var(--ease) both; }
+    @keyframes floor-arrival { from { opacity: .15; } to { opacity: 1; } }
+  }
+}
+@media (max-width: 767px) {
+  .hero-art .image-link > img {
+    mask-image: linear-gradient(to bottom, transparent, var(--ink) 7% 96%, transparent);
+    mask-mode: alpha;
+  }
+  .well-art .image-link > img {
+    mask-image:
+      radial-gradient(ellipse 48% 9% at 65% 91%, var(--ink) 0 64%, transparent 100%),
+      linear-gradient(to right, transparent, var(--ink) 10% 89%, transparent),
+      linear-gradient(to bottom, transparent, var(--ink) 13% 87%, transparent);
+  }
+  .hero-art .image-link::after { transform: rotate(-14deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .well-art .image-link > img { clip-path: circle(115% at 50% 25%); }
+  .light-art .image-link > img { filter: brightness(1.08); }
+  #gaze blockquote { clip-path: none; }
+  .planet circle, .boundary-columns > .prose, .social-links a { opacity: 1; }
+  .hero-art .image-link::after { transform: rotate(-14deg); opacity: 1; }
+  .afterword::before { transform: scaleX(1); }
+}
+@media (max-width: 767px) {
+  .image-link:hover > img, .text-link:hover span { transform: none; }
+}
+/* A broad continuation of the well keeps the signed corner connected to the stone. */
+.well-art { --well-horizontal-mask: linear-gradient(to right, var(--ink) 0 76%, transparent); }
+.well-art .image-link > img {
+  mask-image:
+    linear-gradient(to right, transparent, var(--ink) 2% 98%, transparent),
+    linear-gradient(to bottom, transparent, var(--ink) 2% 98%, transparent),
+    radial-gradient(ellipse 70% 32% at 56% 80%, var(--ink) 0 80%, transparent 100%),
+    var(--well-horizontal-mask),
+    linear-gradient(to bottom, transparent, var(--ink) 14% 85%, transparent);
+  mask-composite: intersect, intersect, add, intersect, add;
+}
+@media (max-width: 767px) {
+  .well-art { --well-horizontal-mask: linear-gradient(to right, transparent, var(--ink) 10% 89%, transparent); }
+}
+.well-art .image-link > img {
+  mask-image:
+    linear-gradient(to right, transparent, var(--ink) 2% 98%, transparent),
+    linear-gradient(to bottom, transparent, var(--ink) 2% 98%, transparent),
+    radial-gradient(ellipse 60% 20% at 60% 87%, color-mix(in srgb, var(--ink) 70%, transparent) 0 55%, transparent 100%),
+    var(--well-horizontal-mask),
+    linear-gradient(to bottom, transparent, var(--ink) 14% 85%, transparent);
+}

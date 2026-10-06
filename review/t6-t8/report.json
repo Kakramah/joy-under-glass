@@ -1,0 +1,350 @@
+{
+  "normal": [
+    {
+      "width": 1440,
+      "section": "hero",
+      "tone": "neutral"
+    },
+    {
+      "width": 1440,
+      "section": "rueya",
+      "tone": "neutral"
+    },
+    {
+      "width": 1440,
+      "section": "gaze",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "section": "well",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "section": "boundaries",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "section": "light",
+      "tone": "warm"
+    },
+    {
+      "width": 1440,
+      "section": "afterword",
+      "tone": "warm"
+    },
+    {
+      "width": 1440,
+      "section": "footer",
+      "tone": "warm"
+    },
+    {
+      "width": 390,
+      "section": "hero",
+      "tone": "neutral"
+    },
+    {
+      "width": 390,
+      "section": "rueya",
+      "tone": "neutral"
+    },
+    {
+      "width": 390,
+      "section": "gaze",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "section": "well",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "section": "boundaries",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "section": "light",
+      "tone": "warm"
+    },
+    {
+      "width": 390,
+      "section": "afterword",
+      "tone": "warm"
+    },
+    {
+      "width": 390,
+      "section": "footer",
+      "tone": "warm"
+    }
+  ],
+  "reduced": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "radius": "115%",
+      "clip": "none",
+      "running": 0,
+      "floor": "0px",
+      "planets": 11
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "radius": "115%",
+      "clip": "none",
+      "running": 0,
+      "floor": "0px",
+      "planets": 11
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "radius": "115%",
+      "clip": "none",
+      "running": 0,
+      "floor": "0px",
+      "planets": 11
+    }
+  ],
+  "errors": [],
+  "motions": {
+    "floor-1440": {
+      "start": "0.0px",
+      "end": "14.6px"
+    },
+    "planets-1440": [
+      {
+        "opacity": "0.756216",
+        "delay": "0s"
+      },
+      {
+        "opacity": "0.44789",
+        "delay": "0.105s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.21s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.315s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.42s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.525s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.63s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.735s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.84s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.945s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "1.05s"
+      }
+    ],
+    "verse-1440": {
+      "animation": "verse-lines",
+      "steps": "2",
+      "clip": "inset(0px 0px 50%)",
+      "text": "إِذْ قَالُوا لَيُوسُفُ وَأَخُوهُ أَحَبُّ إِلَىٰ أَبِينَا مِنَّا وَنَحْنُ عُصْبَةٌ إِنَّ أَبَانَا لَفِي ضَلَالٍ مُّبِينٍ"
+    },
+    "well-1440": {
+      "start": "26.35%",
+      "end": "115.00%"
+    },
+    "geometry-1440": {
+      "width": 1440,
+      "scroll": 1440,
+      "sticky": [
+        "sticky",
+        "sticky",
+        "sticky"
+      ]
+    },
+    "floor-390": {
+      "start": "0px",
+      "end": "0px"
+    },
+    "planets-390": [
+      {
+        "opacity": "0.323954",
+        "delay": "0s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.105s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.21s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.315s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.42s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.525s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.63s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.735s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.84s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "0.945s"
+      },
+      {
+        "opacity": "0.08",
+        "delay": "1.05s"
+      }
+    ],
+    "verse-390": {
+      "animation": "verse-lines",
+      "steps": "3",
+      "clip": "inset(0px 0px 66.6667%)",
+      "text": "إِذْ قَالُوا لَيُوسُفُ وَأَخُوهُ أَحَبُّ إِلَىٰ أَبِينَا مِنَّا وَنَحْنُ عُصْبَةٌ إِنَّ أَبَانَا لَفِي ضَلَالٍ مُّبِينٍ"
+    },
+    "well-390": {
+      "start": "26.28%",
+      "end": "115.00%"
+    },
+    "geometry-390": {
+      "width": 390,
+      "scroll": 390,
+      "sticky": [
+        "static",
+        "static",
+        "static"
+      ]
+    }
+  },
+  "protectedMarks": [
+    {
+      "width": 1440,
+      "marks": [
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark art-mark-light",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "0.86"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "marks": [
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark art-mark-light",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        },
+        {
+          "class": "",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "0.86"
+        },
+        {
+          "class": "art-mark",
+          "mask": "none",
+          "clip": "none",
+          "transform": "none",
+          "opacity": "1"
+        }
+      ]
+    }
+  ]
+}
