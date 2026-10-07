@@ -14,7 +14,7 @@
 
 .art-mark>.avatar-icon{display:block;height:100%;aspect-ratio:545/1295;background:url("images/author-avatar.webp") center/contain no-repeat;opacity:.35;flex-shrink:0}
 
-:root{--avatar-watched:0.34;--avatar-gaze:0.363;--avatar-kept:0.259;}
+:root{--avatar-watched:0.247;--avatar-gaze:0.363;--avatar-kept:0.259;}
 .hero-art{--avatar-alpha:var(--avatar-watched)}.reading-art{--avatar-alpha:var(--avatar-gaze)}.light-art{--avatar-alpha:var(--avatar-kept)}.art-mark>.avatar-icon{opacity:var(--avatar-alpha,.35)}
 /* Yusuf: the dream, the plot, and the fulfilment. */
 :root{--avatar-well:0.227;--verse-size:30px}
@@ -35,7 +35,7 @@
   --paper-neutral: #f2eee5;
   --paper-caution: #edeae4;
   --paper-warm: #f4ebde;
-  --floor-light: #fff4dc;
+  --floor-light: #d9dfe3;
   --floor-shift: 0px;
   --well-radius: 115%;
   --door-brightness: 1.08;
@@ -71,7 +71,7 @@
   bottom: 2%;
   z-index: 1;
   pointer-events: none;
-  background: radial-gradient(ellipse, color-mix(in srgb, var(--floor-light) 44%, transparent), transparent 69%);
+  background: radial-gradient(ellipse, color-mix(in srgb, var(--floor-light) 8%, transparent), transparent 69%);
   transform: translateX(var(--floor-shift)) rotate(-14deg);
   mix-blend-mode: screen;
 }
@@ -187,4 +187,30 @@
     radial-gradient(ellipse 60% 20% at 60% 87%, color-mix(in srgb, var(--ink) 70%, transparent) 0 55%, transparent 100%),
     var(--well-horizontal-mask),
     linear-gradient(to bottom, transparent, var(--ink) 14% 85%, transparent);
+}
+
+/* Moonlit hero: its approved identity is legible in the deep shadow. */
+.hero-art .art-mark > span[dir=ltr] { color: var(--paper-neutral); }
+
+#image-dialog:has(#enlarged-image[src$="/dream-window.webp"]) { --avatar-alpha: var(--avatar-watched) !important; }
+#image-dialog:has(#enlarged-image[src$="/dream-window.webp"]) .art-mark > span[dir=ltr] { color: var(--paper-neutral); }
+
+/* Keep the new hero's identity on the photograph when enlarged. */
+#image-dialog .dialog-art:has(#enlarged-image[src$="/dream-window.webp"]) {
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+#image-dialog #enlarged-image[src$="/dream-window.webp"] {
+  width: auto;
+  height: auto;
+  max-height: 75svh;
+}
+#image-dialog .dialog-art:has(#enlarged-image[src$="/dream-window.webp"]) .art-mark {
+  width: 70%;
+  right: 3.5%;
+}
+@media (max-width: 767px) {
+  #image-dialog #enlarged-image[src$="/dream-window.webp"] { max-height: 65svh; }
 }

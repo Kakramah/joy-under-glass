@@ -1,0 +1,322 @@
+{
+  "browser": "Browser plugin not available; bundled Playwright with installed Google Chrome",
+  "url": "http://127.0.0.1:8047/",
+  "errors": [],
+  "viewports": [
+    {
+      "title": "حين يُراقَب الضوء: من رؤيا يوسف إلى سعة العفو",
+      "h1": 1,
+      "meaningful": 5845,
+      "images": [
+        {
+          "src": "images/dream-window.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/shirt-and-shadow.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/well-of-promise.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/door-of-mercy.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/eagle-emblem-metal.svg",
+          "loaded": true
+        }
+      ],
+      "sourcesInitiallyClosed": true,
+      "width": 1440,
+      "scroll": 1440,
+      "words": 1009,
+      "height": 8504
+    },
+    {
+      "title": "حين يُراقَب الضوء: من رؤيا يوسف إلى سعة العفو",
+      "h1": 1,
+      "meaningful": 5846,
+      "images": [
+        {
+          "src": "images/dream-window.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/shirt-and-shadow.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/well-of-promise.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/door-of-mercy.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/eagle-emblem-metal.svg",
+          "loaded": true
+        }
+      ],
+      "sourcesInitiallyClosed": true,
+      "width": 390,
+      "scroll": 390,
+      "words": 1010,
+      "height": 11576
+    },
+    {
+      "title": "حين يُراقَب الضوء: من رؤيا يوسف إلى سعة العفو",
+      "h1": 1,
+      "meaningful": 5846,
+      "images": [
+        {
+          "src": "images/dream-window.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/shirt-and-shadow.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/well-of-promise.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/door-of-mercy.webp",
+          "loaded": true
+        },
+        {
+          "src": "images/eagle-emblem-metal.svg",
+          "loaded": true
+        }
+      ],
+      "sourcesInitiallyClosed": true,
+      "width": 375,
+      "scroll": 375,
+      "words": 1010,
+      "height": 11630
+    }
+  ],
+  "controls": [
+    {
+      "width": 1440,
+      "heroGallery": {
+        "open": true,
+        "title": "الرؤيا المؤتمنة",
+        "color": "rgb(242, 238, 229)",
+        "alpha": "0.247",
+        "markMask": "none"
+      },
+      "navigation": "ArrowLeft -> shirt; Escape -> hero focus"
+    },
+    {
+      "width": 390,
+      "heroGallery": {
+        "open": true,
+        "title": "الرؤيا المؤتمنة",
+        "color": "rgb(242, 238, 229)",
+        "alpha": "0.247",
+        "markMask": "none"
+      },
+      "navigation": "ArrowLeft -> shirt; Escape -> hero focus"
+    }
+  ],
+  "motion": [
+    {
+      "width": 1440,
+      "floorStart": {
+        "shift": "0.0px",
+        "color": "#d9dfe3",
+        "background": "radial-gradient(color(srgb 0.85098 0.87451 0.890196 / 0.08), rgba(0, 0, 0, 0) 69%)"
+      },
+      "floorEnd": "14.6px"
+    },
+    {
+      "width": 390,
+      "floorStart": {
+        "shift": "0px",
+        "color": "#d9dfe3",
+        "background": "radial-gradient(color(srgb 0.85098 0.87451 0.890196 / 0.08), rgba(0, 0, 0, 0) 69%)"
+      },
+      "floorEnd": "0px"
+    },
+    {
+      "reduced": true,
+      "width": 1440,
+      "scroll": 1440,
+      "running": 0,
+      "radius": "115%",
+      "floor": "0px",
+      "positions": [
+        "sticky",
+        "sticky",
+        "sticky"
+      ]
+    },
+    {
+      "reduced": true,
+      "width": 390,
+      "scroll": 390,
+      "running": 0,
+      "radius": "115%",
+      "floor": "0px",
+      "positions": [
+        "static",
+        "static",
+        "static"
+      ]
+    },
+    {
+      "reduced": true,
+      "width": 375,
+      "scroll": 375,
+      "running": 0,
+      "radius": "115%",
+      "floor": "0px",
+      "positions": [
+        "static",
+        "static",
+        "static"
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "width": 1440,
+      "name": "hero",
+      "tone": "neutral"
+    },
+    {
+      "width": 1440,
+      "name": "rueya",
+      "tone": "neutral"
+    },
+    {
+      "width": 1440,
+      "name": "gaze",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "name": "well",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "name": "boundaries",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "name": "light",
+      "tone": "caution"
+    },
+    {
+      "width": 1440,
+      "name": "afterword",
+      "tone": "warm"
+    },
+    {
+      "width": 1440,
+      "name": "footer",
+      "tone": "warm"
+    },
+    {
+      "width": 390,
+      "name": "hero",
+      "tone": "neutral"
+    },
+    {
+      "width": 390,
+      "name": "rueya",
+      "tone": "neutral"
+    },
+    {
+      "width": 390,
+      "name": "gaze",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "name": "well",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "name": "boundaries",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "name": "light",
+      "tone": "caution"
+    },
+    {
+      "width": 390,
+      "name": "afterword",
+      "tone": "warm"
+    },
+    {
+      "width": 390,
+      "name": "footer",
+      "tone": "warm"
+    }
+  ],
+  "fingerprints": {
+    "index.html": "8b00b429752ff98cceea74ba47447e8c54a07f240c877b89f355d1d6b2ec59a9",
+    "style.css": "73d82526c84531d5d22a14f54c864db11099f32c456f47d807e3c8ad68f0fa8a",
+    "script.js": "f35fe46450b8c9e67f4b74046e15e1ef5338aefed28bda1bd0e159627886643d",
+    "sources.json": "35aef53f82b27c2312c7f5181810dc2dc120b463b8c995fd767b6d9cc4cf9c64",
+    "rueya-data.js": "58fee660f917be33b482652357878c9e21ded2e56a42da8fb92be21278783bfa",
+    "images/dream-window.webp": "78f5cbf2e5b894e9b72ddbebaa2ed41423a4d60be6c55cadc9fccfaec21f4632",
+    "images/share-cover.webp": "512022b90bfcef5b092de69c09e878a77e84a7e97225aa18e905051e39b4a88d"
+  },
+  "identityFinal": [
+    {
+      "width": 1440,
+      "image": {
+        "x": 480,
+        "y": 67.59375,
+        "right": 960,
+        "bottom": 787.59375
+      },
+      "mark": {
+        "x": 607.203125,
+        "y": 722.8125,
+        "right": 943.203125,
+        "bottom": 762.40625
+      },
+      "onImage": true
+    },
+    {
+      "width": 390,
+      "image": {
+        "x": 11.703125,
+        "y": 133.90625,
+        "right": 378.296875,
+        "bottom": 683.796875
+      },
+      "mark": {
+        "x": 108.859375,
+        "y": 634.328125,
+        "right": 365.46875,
+        "bottom": 664.5625
+      },
+      "onImage": true
+    }
+  ],
+  "protectedFilesUnchanged": {
+    "index.html": true,
+    "script.js": true,
+    "sources.json": true,
+    "rueya-data.js": true,
+    "images/shirt-and-shadow.webp": true,
+    "images/well-of-promise.webp": true,
+    "images/door-of-mercy.webp": true,
+    "images/author-avatar.webp": true,
+    "images/eagle-emblem-metal.svg": true
+  }
+}
